@@ -44,12 +44,6 @@ namespace TextTripletFrequency
 
             Task.WaitAll(tasks);
 
-            foreach (var kvp in _tripletFrequency.ToArray().OrderByDescending(kvp => kvp.Value).Take(10))
-            {
-                Console.WriteLine(kvp.Key + "\t" + kvp.Value);
-            }
-            Console.WriteLine();
-
             var top10 = _tripletFrequency.ToArray().OrderByDescending(kvp => kvp.Value).Take(10).Select(kvp => kvp.Key);
 
             Console.WriteLine(string.Join(',', top10));

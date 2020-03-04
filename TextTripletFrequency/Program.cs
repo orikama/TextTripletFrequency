@@ -16,9 +16,9 @@ namespace TextTripletFrequency
             
             Tuple<string, CancellationToken> pathAndToken = Tuple.Create(args[0], cts.Token);
             Task fileProccessing = Task.Factory.StartNew(
-                //() => SimpleWorker.CountTriplets(pathAndToken), 
+                () => SimpleWorker.CountTriplets(pathAndToken),
                 //() => MultithreadedWorker.CountTriplets(pathAndToken),
-                () => MultithreadedWorker_MultiDictionaries.CountTriplets(pathAndToken),
+                //() => MultithreadedWorker_MultiDictionaries.CountTriplets(pathAndToken),
                 cts.Token,
                 TaskCreationOptions.LongRunning,
                 TaskScheduler.Default);

@@ -53,7 +53,7 @@ namespace TextTripletFrequency
                 }
             }
 
-            string[] top10 = tripletFrequency.OrderByDescending(kvp => kvp.Value).Take(10).Select(kvp => kvp.Key).ToArray();
+            var top10 = tripletFrequency.OrderByDescending(kvp => kvp.Value).Take(10).Select(kvp => kvp.Key);
 
             Console.WriteLine(string.Join(',', top10));
         }

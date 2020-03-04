@@ -61,12 +61,6 @@ namespace TextTripletFrequency
                 }
             }
 
-            foreach (var kvp in result.ToArray().OrderByDescending(kvp => kvp.Value).Take(10))
-            {
-                Console.WriteLine(kvp.Key + "\t" + kvp.Value);
-            }
-            Console.WriteLine();
-
             var top10 = result.ToArray().OrderByDescending(kvp => kvp.Value).Take(10).Select(kvp => kvp.Key);
 
             Console.WriteLine(string.Join(',', top10));
