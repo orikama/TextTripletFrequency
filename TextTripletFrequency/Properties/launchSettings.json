@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TextTripletFrequency": {
+      "commandName": "Project",
+      "commandLineArgs": "text1.txt"
+    }
+  }
+}
